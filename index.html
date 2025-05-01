@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>CV Radian Arga F</title>
   <style>
     /* Reset */
@@ -11,132 +12,160 @@
       padding: 0;
       box-sizing: border-box;
     }
-
+  
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f4f4f4;
     }
-
+  
     /* Navigasi */
     .navbar {
       background-color: #111;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 30px;
+      padding: 10px 20px;
       color: white;
+      flex-wrap: wrap;
     }
-
+  
     .navbar .logo {
       display: flex;
       align-items: center;
       font-size: 20px;
       font-weight: bold;
     }
-
+  
     .navbar .logo img {
       width: 30px;
       height: 30px;
       border-radius: 50%;
       margin-right: 10px;
     }
-
+  
     .navbar .menu a {
       color: #1da1f2;
       text-decoration: none;
-      margin-left: 25px;
+      margin-left: 15px;
       font-weight: bold;
+      font-size: 16px;
     }
-
+  
     .navbar .menu a:hover {
       text-decoration: underline;
     }
-
+  
     /* Konten CV */
     .cv-container {
       display: flex;
-      margin-top: 0;
+      flex-wrap: wrap;
     }
-
+  
     .sidebar {
-      width: 32%;
+      flex: 1 1 300px;
       background-color: #d3d3d3;
       padding: 30px 20px;
       text-align: center;
-      min-height: 100vh;
     }
-
+  
     .sidebar img {
-      width: 200px;
+      width: 190px;
+      max-width: 100%;
       border-radius: 100%;
       margin-bottom: 10px;
     }
-
+  
     .sidebar h2 {
       margin-top: 10px;
       font-size: 20px;
     }
-
+  
     .sidebar .contact, .sidebar .skills, .sidebar .hobbies {
       text-align: left;
       margin-top: 30px;
     }
-
+  
     .sidebar .skills ul,
     .sidebar .hobbies ul {
       list-style: none;
       padding: 0;
     }
-
+  
     .sidebar .skills li,
     .sidebar .hobbies li {
       margin-bottom: 10px;
     }
-
+  
     .main {
-      width: 70%;
+      flex: 2 1 600px;
       background-color: #1c3a5e;
       color: white;
-      padding: 40px;
+      padding: 30px 25px;
     }
-
+  
     .main h1 {
-      font-size: 32px;
+      font-size: 28px;
       margin-bottom: 0;
     }
-
+  
     .main h2 {
       color: #f9a825;
-      margin-top: 40px;
+      margin-top: 30px;
     }
-
+  
     .section {
       margin-top: 20px;
     }
-
+  
     .section p {
       line-height: 1.6;
     }
-
+  
     .section ul {
       list-style: none;
       padding-left: 0;
     }
-
+  
     .section ul li {
       margin-bottom: 15px;
     }
-
+  
     a {
       color: #000;
       text-decoration: none;
     }
-
+  
     .contact a {
       display: block;
       margin-bottom: 5px;
+      word-break: break-word;
     }
-  </style>
+  
+    /* 🌐 Responsif untuk layar kecil */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+  
+      .navbar .menu {
+        margin-top: 10px;
+      }
+  
+      .cv-container {
+        flex-direction: column;
+      }
+  
+      .main, .sidebar {
+        width: 100%;
+        padding: 20px;
+      }
+  
+      .main h1 {
+        font-size: 24px;
+      }
+    }
+  </style>  
 </head>
 <body>
 
@@ -161,10 +190,22 @@
 
       <div class="contact">
         <h3>Contact</h3>
-        <a href="tel:+6282345397148">📞 (+62) 82345397148</a>
-      <a href="mailto:radytaradian99@gmail.com">✉️ radytaradian99@gmail.com</a>
-      <a href="https://www.linkedin.com/in/radian-arga-fadhilla-6779262b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">🔗 linkedin.com/in/radian-arga</a>
-      <a href="https://sites.google.com/view/argaanzz/beranda">🌐 argaanzz.com</a>
+        <a href="#" target="_blank">
+          <i class="fas fa-map-marker-alt"></i>  Kediri, Indonesia
+        </a>
+        <a href="https://radian-arga.github.io/" target="_blank">
+          <i class="fas fa-link"></i>  radian-arga.github.io
+        </a>
+        <a href="https://www.linkedin.com/in/radian-arga-fadhilla" target="_blank">
+          <i class="fab fa-linkedin"></i>  linkedin.com/in/radian-arga-fadhilla
+        </a>
+        <a href="mailto:radytaradian99@gmail.com">
+          <i class="fas fa-envelope"></i>  radytaradian99@gmail.com
+        </a>
+        <a href="tel:+6282345397148">
+          <i class="fas fa-phone"></i>  +6282345397148
+        </a>
+        
       </div>
 
       <div class="skills">
@@ -197,6 +238,8 @@
         <p>Halo rek... Saya Manusia laki-laki yang biasa, makan nasi</p>
         <li><strong>Gender:</strong> Man(laki-laki)</li>
         <li><strong>Age:</strong> 17</li>
+        <li><strong>Tempat, Tanggal Lahir:</strong> Probolinggo, 28 April 2008</li>
+        <li><strong>Alamat:</strong> Perum Gren Pratama No B.12, Rembangkepuh, Kec. Ngadiluwih, Kediri</li>
         <li><strong>Status:</strong> Yatim Absolut & Jomblo</li>
       </div>
 
@@ -206,6 +249,7 @@
           <li><strong>2023–2025:</strong> SMKN 1 Kediri: Teknik Jaringan Komputer & Telekomunikasi</li>
           <li><strong>2020–2022:</strong> SMPN 1 Maron</li>
           <li><strong>2013–2019:</strong> SDN Maron Wetan 1</li>
+          
           <li><strong>2011–2012:</strong> TK Wijaya Kusuma 2</li>
         </ul>
       </div>
@@ -223,4 +267,3 @@
 
 </body>
 </html>
-
