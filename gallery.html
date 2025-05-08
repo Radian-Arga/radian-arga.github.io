@@ -48,7 +48,7 @@
 
     header {
   position: relative;
-  background: url("photo/background-gundam.jpg") no-repeat center center/cover;
+  background: url("background-gundam.jpg") no-repeat center center/cover;
   height: 350px;
   color: rgb(255, 255, 255);
   text-align: center;
@@ -68,12 +68,19 @@ header::after {
   z-index: 1;
 }
 
+header h1 {
+  font-size: 36px;
+  margin: 0 20px;
+  text-align: center;
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
 header h1,
 header p {
   position: relative;
   z-index: 2; /* pastikan teks ada di atas overlay */
 }
-
 
     .container {
       padding: 40px 20px;
@@ -141,12 +148,13 @@ header p {
         font-size: 24px;
       }
     }
-    
+
     @media screen and (max-width: 600px) {
-      header h1 {
-        font-size: 32px;
-      }
-    }
+  header h1 {
+    font-size: 28px; /* lebih kecil untuk layar sempit */
+    margin: 0 10px;   /* beri margin kiri-kanan agar tidak mentok */
+  }
+}
   </style>
 </head>
 <body>
